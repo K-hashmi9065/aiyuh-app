@@ -1,19 +1,21 @@
-final sl = GetIt.instance;
+// import 'package:get_it/get_it.dart';
 
-Future<void> init() async {
-  // Providers
-  sl.registerFactory(() => UserProvider(sl()));
+// final sl = GetIt.instance;
 
-  // UseCases
-  sl.registerLazySingleton(() => GetUser(sl()));
+// Future<void> init() async {
+//   // Providers
+//   sl.registerFactory(() => UserProvider(sl()));
 
-  // Repositories
-  sl.registerLazySingleton<UserRepository>(
-    () => UserRepositoryImpl(remoteDataSource: sl()),
-  );
+//   // UseCases
+//   sl.registerLazySingleton(() => GetUser(sl()));
 
-  // DataSources
-  sl.registerLazySingleton<UserRemoteDataSource>(
-    () => UserRemoteDataSourceImpl(),
-  );
-}
+//   // Repositories
+//   sl.registerLazySingleton<UserRepository>(
+//     () => UserRepositoryImpl(remoteDataSource: sl()),
+//   );
+
+//   // DataSources
+//   sl.registerLazySingleton<UserRemoteDataSource>(
+//     () => UserRemoteDataSourceImpl(),
+//   );
+// }
